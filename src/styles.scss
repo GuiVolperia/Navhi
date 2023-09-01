@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'NavhiFont';
+    src: url('/assets/fonts/NavhiFont.otf') format('opentype');
+}
+
+body, button, input, textarea {
+    font-family: 'NavhiFont'; /* Use the name you've provided in @font-face */
+  }

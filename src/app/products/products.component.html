@@ -1,0 +1,10 @@
+<div class="products-container">
+    <h2>Chopp Interstellar</h2>
+
+    <div *ngFor="let product of products" class="product-card">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p>Preço: R${{ product.price }}</p>
+        <!-- You can add buttons for actions like 'Add to Cart', 'View Details', etc. -->
+    </div>
+</div>
