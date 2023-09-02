@@ -1,27 +1,44 @@
 .products-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  gap: 2rem; /* Espaçamento entre os cards */
-  
+  gap: 2rem;
+  /* Espaçamento entre os cards */
+
 }
 
 .product-card {
-  border: 1px solid #e0e0e0; /* Uma borda leve para visualização do card */
+  border: 1px solid #e0e0e0;
+  /* Uma borda leve para visualização do card */
   padding: 1rem;
-  border-radius: 8px; /* Bordas arredondadas para estética */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para levantar um pouco o card */
+  border-radius: 8px;
+  /* Bordas arredondadas para estética */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil para levantar um pouco o card */
   background-color: rgb(33, 0, 45) !important;
 }
 
 .product-card img.imagem1 {
-  width: 100%; /* Faz a imagem preencher totalmente a largura do card */
+  width: 100%;
+  /* Faz a imagem preencher totalmente a largura do card */
   height: auto;
-  max-height: 200px; /* Limita a altura para evitar imagens muito altas */
-  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
-  border-radius: 8px; /* Bordas arredondadas para estética */
-  margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+  max-height: 200px;
+  /* Limita a altura para evitar imagens muito altas */
+  object-fit: cover;
+  /* Garante que a imagem cubra o espaço sem distorção */
+  border-radius: 8px;
+  /* Bordas arredondadas para estética */
+  margin-bottom: 1rem;
+  /* Espaçamento abaixo da imagem */
 }
 
 .btn-container {
   text-align: center;
+}
+
+p {
+  margin-top: 10px;
+}
+
+h3{
+  margin-bottom: 10px;
 }

@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
+import { EventsComponent } from './events/events.component';
+import { Subscription } from 'rxjs';
 
 
 
@@ -18,8 +20,8 @@ import { ProductsComponent } from './products/products.component';
      AboutUsComponent,
      HomeComponent,
      ContactUsComponent,
-     ProductsComponent
-
+     ProductsComponent,
+     EventsComponent,     
   ],
   imports: [
     BrowserModule,
