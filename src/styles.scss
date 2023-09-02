@@ -37,7 +37,7 @@ a, label, input, button {font-family: 'NavhiFont';}
 .botaoNavhi {
     background-color: rgb(33, 0, 45);
     color: white !important;  /* Defini a cor do texto para branco para contraste. Ajuste conforme necessário. */
-    border: none;
+    border: solid 2px rgb(33, 0, 45) ;
     border-radius: 5px; /* Borda arredondada. Ajuste conforme necessário. */
     padding: 10px 20px; /* Espaçamento interno para o botão. Ajuste conforme necessário. */
     cursor: pointer;
@@ -47,12 +47,14 @@ a, label, input, button {font-family: 'NavhiFont';}
 }
 
 .botaoNavhi:hover {
-    background-color: rgba(33, 0, 45, 0.9); /* Um pouco mais claro no hover */
+    background-color: white !important; /* Um pouco mais claro no hover */
+    border: solid 2px rgb(33, 0, 45) ;
+    color: rgb(33, 0, 45) !important;
 }
 
 .botaoNavhi:active {
     background-color: rgba(33, 0, 45, 0.8); /* Ainda mais claro no estado ativo */
-    transform: scale(0.97); /* Faz o botão parecer um pouco pressionado quando ativo */
+    transform: scale(0.95); /* Faz o botão parecer um pouco pressionado quando ativo */
 }
 
 /* Se o botão for um link, remova o sublinhado */
@@ -75,11 +77,13 @@ a, label, input, button {font-family: 'NavhiFont';}
     /* Efeitos adicionais para hover e active, para uma melhor interação do usuário */
     &:hover {
         background-color: rgba(33, 0, 45, 0.1); /* Uma leve mudança de cor no hover */
+        color: white !important;
+        border: solid 2px white;
     }
 
     &:active {
         background-color: rgba(33, 0, 45, 0.2); /* Uma cor ligeiramente mais escura no active */
-        transform: translateY(2px); /* Um pequeno deslocamento para baixo para efeito de pressionar */
+        transform: scale(0.95); /* Faz o botão parecer um pouco pressionado quando ativo */
     }
 }
 
