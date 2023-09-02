@@ -2,8 +2,8 @@
     <div class="event-details">
         <h3>{{ event.name }}</h3>
         <p>Descrição: {{ event.description }}</p>
-        <p>Quando vai ser: {{ event.date | date:'dd-MMM-yy' }}</p>
-        <p>Às : {{ event.date | date:'HH-mm' }} Horas</p>
+        <p>Quando vai ser: {{ event.date | date:'dd/MM/yy' }}</p>
+        <p>Às : {{ event.date | date:'HH:mm' }} Horas</p>
         <button class="botaoNavhi">Saiba mais</button>
     </div>
     <div class="flyer-container">

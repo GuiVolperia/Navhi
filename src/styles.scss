@@ -7,7 +7,13 @@
 body,
 button,
 input,
-textarea, p, h1, h2, h3, h4, h5 {
+textarea,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'NavhiFont';
     color: rgb(33, 0, 45) !important;
     /* Use the name you've provided in @font-face */
@@ -16,19 +22,38 @@ textarea, p, h1, h2, h3, h4, h5 {
 img {
     max-width: 100%;
     height: auto;
-  }
-  
-.corBranca{
+}
+
+.corBranca {
     color: white !important;
+}
+
+.corRoxa {    
+    color: rgb(33, 0, 45) !important;
+}
+
+.bordaLetraRoxa {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(33, 0, 45) !important;
+}
+
+.bordaLetraRoxaMenor {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(33, 0, 45) !important;
 }
 
 .corFundoRoxa {
     background-color: rgb(33, 0, 45) !important;
-    width: 100%; 
+    width: 100%;
     padding: 50px 0;
 }
 
-a, label, input, button {font-family: 'NavhiFont';}
+a,
+label,
+input,
+button {
+    font-family: 'NavhiFont';
+}
 
 .content {
     background-color: white;
@@ -36,29 +61,39 @@ a, label, input, button {font-family: 'NavhiFont';}
 
 .botaoNavhi {
     background-color: rgb(33, 0, 45);
-    color: white !important;  /* Defini a cor do texto para branco para contraste. Ajuste conforme necessário. */
-    border: solid 2px rgb(33, 0, 45) ;
-    border-radius: 5px; /* Borda arredondada. Ajuste conforme necessário. */
-    padding: 10px 20px; /* Espaçamento interno para o botão. Ajuste conforme necessário. */
+    color: white !important;
+    /* Defini a cor do texto para branco para contraste. Ajuste conforme necessário. */
+    border: solid 2px rgb(33, 0, 45);
+    border-radius: 5px;
+    /* Borda arredondada. Ajuste conforme necessário. */
+    padding: 10px 20px;
+    /* Espaçamento interno para o botão. Ajuste conforme necessário. */
     cursor: pointer;
-    transition: all 0.3s; /* Transição suave para hover e active */
-    text-decoration: none; /* Se for um link estilizado como botão */
-    font-family: 'NavhiFont'; /* Herda a fonte do elemento pai. Ajuste conforme necessário. */
+    transition: all 0.3s;
+    /* Transição suave para hover e active */
+    text-decoration: none;
+    /* Se for um link estilizado como botão */
+    font-family: 'NavhiFont';
+    /* Herda a fonte do elemento pai. Ajuste conforme necessário. */
 }
 
 .botaoNavhi:hover {
-    background-color: white !important; /* Um pouco mais claro no hover */
-    border: solid 2px rgb(33, 0, 45) ;
+    background-color: white !important;
+    /* Um pouco mais claro no hover */
+    border: solid 2px rgb(33, 0, 45);
     color: rgb(33, 0, 45) !important;
 }
 
 .botaoNavhi:active {
-    background-color: rgba(33, 0, 45, 0.8); /* Ainda mais claro no estado ativo */
-    transform: scale(0.95); /* Faz o botão parecer um pouco pressionado quando ativo */
+    background-color: rgba(33, 0, 45, 0.8);
+    /* Ainda mais claro no estado ativo */
+    transform: scale(0.95);
+    /* Faz o botão parecer um pouco pressionado quando ativo */
 }
 
 /* Se o botão for um link, remova o sublinhado */
-.botaoNavhi:link, .botaoNavhi:visited {
+.botaoNavhi:link,
+.botaoNavhi:visited {
     text-decoration: none;
 }
 
@@ -66,7 +101,8 @@ a, label, input, button {font-family: 'NavhiFont';}
 .botaoNavhiBranco {
     background-color: white;
     color: rgb(33, 0, 45) !important;
-    border: 2px solid rgb(33, 0, 45); /* Bordas definidas conforme solicitado */
+    border: 2px solid rgb(33, 0, 45);
+    /* Bordas definidas conforme solicitado */
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
@@ -76,14 +112,17 @@ a, label, input, button {font-family: 'NavhiFont';}
 
     /* Efeitos adicionais para hover e active, para uma melhor interação do usuário */
     &:hover {
-        background-color: rgba(33, 0, 45, 0.1); /* Uma leve mudança de cor no hover */
+        background-color: rgba(33, 0, 45, 0.1);
+        /* Uma leve mudança de cor no hover */
         color: white !important;
         border: solid 2px white;
     }
 
     &:active {
-        background-color: rgba(33, 0, 45, 0.2); /* Uma cor ligeiramente mais escura no active */
-        transform: scale(0.95); /* Faz o botão parecer um pouco pressionado quando ativo */
+        background-color: rgba(33, 0, 45, 0.2);
+        /* Uma cor ligeiramente mais escura no active */
+        transform: scale(0.95);
+        /* Faz o botão parecer um pouco pressionado quando ativo */
     }
 }
 
@@ -96,7 +135,7 @@ a, label, input, button {font-family: 'NavhiFont';}
     margin-right: 10px !important;
 }
 
-.pd-0{
+.pd-0 {
     padding: 0 !important;
 }
 
@@ -104,23 +143,35 @@ a, label, input, button {font-family: 'NavhiFont';}
     padding-bottom: 32px;
 }
 
-.float-right{
+.float-right {
     float: right;
 }
 
 //Configuração de fontes
-.fs-16{
+.fs-16 {
     font-size: 16px !important;
 }
 
-.fs-17{
+.fs-17 {
     font-size: 17px !important;
 }
 
-.fs-18{
+.fs-18 {
     font-size: 18px !important;
 }
 
-.fs-24{
+.fs-24 {
     font-size: 24px !important;
+}
+
+.fonteNavhi{
+    font-family: 'NavhiFont';   
+}
+
+.txtBoxNavhi {
+    font-family: 'NavhiFont';   
+}
+
+.txtBoxNavhi:focus {        
+    box-shadow: 0 0 0 0.10rem rgb(33, 0, 45) !important;
 }
