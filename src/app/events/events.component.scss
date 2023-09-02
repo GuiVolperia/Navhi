@@ -33,6 +33,7 @@
     background-color: #555;
 }
 
+// Estilos padrão (para mobile)
 .event-card {
     display: flex;
     justify-content: space-between;
@@ -42,17 +43,17 @@
     width: 100%;
 }
 
-.event-details {  
+.event-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 0.3; /* 40% do espaço para os detalhes */
+    flex: 0.3;
     padding: 20px;
     text-align: center;
 }
 
 .flyer-container {
-    flex: 0.7; /* 60% do espaço para o flyer */
+    flex: 0.7;
     position: relative;
     overflow: hidden;
 }
@@ -89,4 +90,19 @@
 
 .btn-details:hover {
     background-color: #555;
+}
+
+@media (max-width: 767px) {
+    .event-card {
+        flex-direction: column;
+        align-items: center; // Centraliza o conteúdo
+    }
+
+    .event-details, .flyer-container {
+        width: 100%; // Ambos os elementos ocuparão toda a largura em dispositivos móveis
+    }
+
+    .flyer-container {
+        margin-top: 20px; // Adiciona espaço entre os detalhes do evento e o flyer
+    }
 }

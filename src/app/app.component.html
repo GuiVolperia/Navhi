@@ -4,14 +4,23 @@
       <div class="logo pb-3">
         <a routerLink="/">
           <img src="assets/imgs/Logo.png" alt="Logo da Cervejaria" class="img-fluid mr-1 pd-0" style="max-width: 25px;">
-          <a class="fs-24">Navhi</a>          
+          <span class="fs-24">Navhi</span>
         </a>
       </div>
-      <ul class="nav-links">
-        <li><a routerLink="/products">Chopps</a></li>
-        <li><a routerLink="/events">Eventos</a></li>
-        <li><a routerLink="/about-us">Sobre a Navhi</a></li>
-        <li><a routerLink="/contact-us">Vem Trocar ideia</a></li>        
+
+      <!-- Hamburger menu -->
+      <button class="hamburger-menu" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" #navMenu>
+        <li><a routerLink="/products" (click)="toggleMenu()">Chopps</a></li>
+        <li><a routerLink="/events" (click)="toggleMenu()">Eventos</a></li>
+        <li><a routerLink="/about-us" (click)="toggleMenu()">Sobre a Navhi</a></li>
+        <li><a routerLink="/contact-us" (click)="toggleMenu()">Vem Trocar ideia</a></li>
       </ul>
     </nav>
   </div>
