@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
   products = [
-    { id: 1, name: 'Therra', description: 'Chopp mais leve sem glutém', price: 30 },
-    { id: 2, name: 'Osiris', description: 'Nossa Ipa', price: 35 },
-    { id: 2, name: 'Black', description: 'Cervejica Gostosa', price: 36 }
+    { id: 1, name: 'Therra', description: 'Chopp mais leve sem glutém', price: 30, img: 'assets/imgs/therra-rotulo.png' },
+    { id: 2, name: 'Osiris', description: 'Nossa Ipa', price: 35, img: 'assets/imgs/osiris-rotulo.png' },
+    { id: 2, name: 'Black', description: 'Cervejica Gostosa', price: 36, img: 'assets/imgs/osiris-rotulo.png'  }
     // ... add more products as needed
   ];
 
