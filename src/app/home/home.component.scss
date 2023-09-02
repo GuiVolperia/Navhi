@@ -16,6 +16,15 @@ h1, h2 {
   .hero-image {
     background: url('../../assets/imgs/Background-Alien.png') center center no-repeat;
     background-size: cover;  // Isso fará com que a imagem cubra toda a div
-    height: 750px;;  // Ajuste conforme necessário, 80vh irá ocupar 80% da altura da janela
-    margin-bottom: 2rem; // Espaçamento após a imagem de fundo
+    height: 1000px;;  // Ajuste conforme necessário, 80vh irá ocupar 80% da altura da janela    
+  }
+
+  .imagensHome {
+    background-size: cover;
+    border: solid 50px;
+    color: rgb(33, 0, 45) !important;
+  }
+
+  .letraBranca {
+    color: white !important;
   }
