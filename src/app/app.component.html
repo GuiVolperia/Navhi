@@ -1,16 +1,22 @@
-<div class="header">
-  <nav class="navbar">
-    <div class="logo">
-      <a routerLink="/">Navhi</a>
-    </div>
-    <ul class="nav-links">     
-      <li><a routerLink="/about-us">Sobre a Navhi</a></li>
-      <li><a routerLink="/contact-us">Vem Trocar idéia</a></li>
-      <li><a routerLink="/products">Chopps</a></li>
-      <!-- Add more menu items as needed -->
-    </ul>
-  </nav>
-</div>
-<div class="content">  
-  <router-outlet></router-outlet>
+<div class="container">
+  <div class="header">
+    <nav class="navbar">
+      <div class="logo pb-3">
+        <a routerLink="/">
+          <img src="assets/imgs/Logo.png" alt="Logo da Cervejaria" class="img-fluid mr-1 pd-0" style="max-width: 25px;">
+          <a class="fs-20">Navhi</a>          
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a routerLink="/about-us">Sobre a Navhi</a></li>
+        <li><a routerLink="/contact-us">Vem Trocar idéia</a></li>
+        <li><a routerLink="/products">Chopps</a></li>
+        <!-- Add more menu items as needed -->
+      </ul>
+    </nav>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>

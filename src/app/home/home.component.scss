@@ -1,0 +1,21 @@
+h1, h2 { 
+    font-family: 'NavhiFont';
+    color: #875a3d;  // Um marrom para dar um toque de madeira/cervejaria.
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  p {   
+    font-family: 'NavhiFont';
+    color: #6b6b6b;
+  }
+
+  .hero-image {
+    background: url('../../assets/imgs/Background-Alien.png') center center no-repeat;
+    background-size: cover;  // Isso fará com que a imagem cubra toda a div
+    height: 750px;;  // Ajuste conforme necessário, 80vh irá ocupar 80% da altura da janela
+    margin-bottom: 2rem; // Espaçamento após a imagem de fundo
+  }
