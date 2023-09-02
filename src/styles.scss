@@ -19,10 +19,36 @@ textarea, p, h1, h2, h3, h4, h5 {
     padding: 50px 0;
 }
 
-a, label, input {font-family: 'NavhiFont';}
+a, label, input, button {font-family: 'NavhiFont';}
 
 .content {
     background-color: white;
+}
+
+.botaoNavhi {
+    background-color: rgb(33, 0, 45);
+    color: white !important;  /* Defini a cor do texto para branco para contraste. Ajuste conforme necessário. */
+    border: none;
+    border-radius: 5px; /* Borda arredondada. Ajuste conforme necessário. */
+    padding: 10px 20px; /* Espaçamento interno para o botão. Ajuste conforme necessário. */
+    cursor: pointer;
+    transition: all 0.3s; /* Transição suave para hover e active */
+    text-decoration: none; /* Se for um link estilizado como botão */
+    font-family: 'NavhiFont'; /* Herda a fonte do elemento pai. Ajuste conforme necessário. */
+}
+
+.botaoNavhi:hover {
+    background-color: rgba(33, 0, 45, 0.9); /* Um pouco mais claro no hover */
+}
+
+.botaoNavhi:active {
+    background-color: rgba(33, 0, 45, 0.8); /* Ainda mais claro no estado ativo */
+    transform: scale(0.97); /* Faz o botão parecer um pouco pressionado quando ativo */
+}
+
+/* Se o botão for um link, remova o sublinhado */
+.botaoNavhi:link, .botaoNavhi:visited {
+    text-decoration: none;
 }
 
 //Spacing
@@ -59,6 +85,6 @@ a, label, input {font-family: 'NavhiFont';}
     font-size: 18px !important;
 }
 
-.fs-20{
-    font-size: 20px !important;
+.fs-24{
+    font-size: 24px !important;
 }
