@@ -175,3 +175,10 @@ button {
 .txtBoxNavhi:focus {        
     box-shadow: 0 0 0 0.10rem rgb(33, 0, 45) !important;
 }
+
+@media (max-width: 768px) {
+    .bordaLetraRoxa {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgb(33, 0, 45) !important;
+    }
+  }

@@ -17,15 +17,19 @@
       </button>
 
       <ul class="nav-links" #navMenu>
-        <li><a routerLink="/products" (click)="toggleMenu()">Chopps</a></li>
-        <li><a routerLink="/events" (click)="toggleMenu()">Eventos</a></li>
-        <li><a routerLink="/about-us" (click)="toggleMenu()">Sobre a Navhi</a></li>
-        <li><a routerLink="/contact-us" (click)="toggleMenu()">Vem Trocar ideia</a></li>
+        <li><a routerLink="/chopps" (click)="toggleMenu()">Chopps</a></li>
+        <li><a routerLink="/eventos" (click)="toggleMenu()">Eventos</a></li>
+        <li><a routerLink="/sobre" (click)="toggleMenu()">Sobre a Navhi</a></li>
+        <li><a routerLink="/contato" (click)="toggleMenu()">Vem Trocar ideia</a></li>
       </ul>
     </nav>
   </div>
 
   <div class="content">
     <router-outlet></router-outlet>
+    <div class="text-center mt-5 fonteNavhi">
+      &copy; {{ currentYear }} Navhi. Todos os direitos reservados. Desenvolvido por : <a class="corRoxa"
+        href="https://www.instagram.com/guilherme.volpe/">Guilherme Volpe</a>
+    </div>
   </div>
 </div>

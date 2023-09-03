@@ -6,7 +6,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'navhi';
+  currentYear: number = new Date().getFullYear();
 
   @ViewChild('navMenu', {static:false}) navMenu!: ElementRef;
 

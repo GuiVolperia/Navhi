@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { interval, Subscription } from 'rxjs';
 import { mapTo, scan } from 'rxjs/operators';
 
@@ -35,15 +36,21 @@ export class EventsComponent implements OnInit, OnDestroy {
     // ... você pode adicionar mais eventos aqui
   ];
 
+  constructor(private titleService: Title) { }
+    
+
   private timerSubscription!: Subscription;
 
 
   ngOnInit(): void {
+    this.titleService.setTitle('Navhi - Eventos');
+  
     this.timerSubscription = interval(1000).subscribe(() => {
       for (const event of this.events) {
         event.timeDiff = this.calculateTimeDiff(event.date);
       }
     });
+    
   }
 
   ngOnDestroy(): void {
