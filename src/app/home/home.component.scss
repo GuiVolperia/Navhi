@@ -21,6 +21,8 @@ h1, h2 {
     background-size: cover;
     border: solid 50px;
     color: rgb(33, 0, 45) !important;
+    height: 636px;
+    width: 636px;
   }
 
   .letraBranca {
@@ -62,7 +64,7 @@ h1, h2 {
   transform: scale(0.9); /* Efeito de redução (10%) no clique */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1350px) {
   h1 {
       font-size: 2em;  // Diminuir o tamanho da fonte
   } 
@@ -77,6 +79,7 @@ h1, h2 {
 
   .imagensHome {
       border: solid 30px;  // Reduzir a borda
+      height: auto;
   }
 
   .social-icons a {    
