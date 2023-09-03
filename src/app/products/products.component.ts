@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-products',
@@ -13,7 +14,7 @@ export class ProductsComponent implements OnInit {
       name: 'Therra Ale',
       description: 'Chopp mais leve sem glutém',
       ingredients: 'Malte X, Lupulo Y',
-      price: 30, img: 'assets/imgs/therra-rotulo.png'
+      price: 30, img: 'assets/imgs/therra-rotulo.avif'
     },
 
     {
@@ -22,7 +23,7 @@ export class ProductsComponent implements OnInit {
       description: 'Nosso IPA',
       ingredients: 'Malte X, Lupulo Y',
       price: 35,
-      img: 'assets/imgs/osiris-rotulo.png'
+      img: 'assets/imgs/osiris-rotulo.avif'
     },
     {
       id: 3,
@@ -30,7 +31,7 @@ export class ProductsComponent implements OnInit {
       description: 'Um Black IPA Interstellar',
       ingredients: 'Malte X, Lupulo Y',
       price: 45,
-      img: 'assets/imgs/kemet-rotulo.png'
+      img: 'assets/imgs/kemet-rotulo.avif'
     }
   ];
 
@@ -40,4 +41,16 @@ export class ProductsComponent implements OnInit {
     this.titleService.setTitle('Navhi - Chopps');
     this.metaService.addTag({ name: 'description', content: 'Navhi - Chopps | Esta página contém uma lista dos nossos chopps interstellares.' });
   }
+
+  productSelected(product: any) {    
+    Swal.fire({
+      title: 'Aviso!',
+      text: 'Estamos trabalhando na construção da nossa loja aqui.',
+      icon: 'warning',
+      confirmButtonColor: '#ffff66',
+      confirmButtonText: 'Entendido'
+    });
+
+  }
+
 }

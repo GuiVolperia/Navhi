@@ -15,7 +15,7 @@ export class EventsComponent implements OnInit, OnDestroy {
       date: new Date('2023-09-05T08:00:00'),
       description: 'Descrição do Evento 1',
       timeDiff: '',
-      flyer: '../../assets/imgs/therra-rotulo.png'
+      flyer: '../../assets/imgs/therra-rotulo.avif'
     },
     
     {
@@ -23,7 +23,7 @@ export class EventsComponent implements OnInit, OnDestroy {
       date: new Date('2023-10-09T08:00:00'),
       description: 'Descrição do Evento 1',
       timeDiff: '',
-      flyer: '../../assets/imgs/therra-rotulo.png'
+      flyer: '../../assets/imgs/therra-rotulo.avif'
     },
 
     {
@@ -31,7 +31,7 @@ export class EventsComponent implements OnInit, OnDestroy {
       date: new Date('2023-12-31T08:00:00'),
       description: 'Descrição do Evento 1',
       timeDiff: '',
-      flyer: '../../assets/imgs/therra-rotulo.png'
+      flyer: '../../assets/imgs/therra-rotulo.avif'
     }    
   ];
 
