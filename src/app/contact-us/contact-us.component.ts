@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
 
@@ -16,10 +16,11 @@ export class ContactUsComponent implements OnInit {
     message: ''
   };
 
-  constructor(private titleService: Title, private http: HttpClient) { }
+  constructor(private titleService: Title, private http: HttpClient, private metaService: Meta) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('Navhi - Contato');
+    this.metaService.addTag({ name: 'description', content: 'Navhi - Contato | Entre em contato conosco e peça seu chopp.' });
   }
 
   onSubmit() {

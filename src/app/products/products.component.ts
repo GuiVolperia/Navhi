@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-products',
@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
     },
     {
       id: 3,
-      name: 'Kemet Balck Ipa',
+      name: 'Kemet Black Ipa',
       description: 'Um Black IPA Interstellar',
       ingredients: 'Malte X, Lupulo Y',
       price: 45,
@@ -34,9 +34,10 @@ export class ProductsComponent implements OnInit {
     }
   ];
 
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('Navhi - Chopps');
+    this.metaService.addTag({ name: 'description', content: 'Navhi - Chopps | Esta página contém uma lista dos nossos chopps interstellares.' });
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { interval, Subscription } from 'rxjs';
 import { mapTo, scan } from 'rxjs/operators';
 
@@ -32,11 +32,10 @@ export class EventsComponent implements OnInit, OnDestroy {
       description: 'Descrição do Evento 1',
       timeDiff: '',
       flyer: '../../assets/imgs/therra-rotulo.png'
-    }
-    // ... você pode adicionar mais eventos aqui
+    }    
   ];
 
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title, private metaService: Meta) { }
     
 
   private timerSubscription!: Subscription;
@@ -44,7 +43,8 @@ export class EventsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.titleService.setTitle('Navhi - Eventos');
-  
+    this.metaService.addTag({ name: 'description', content: 'Navhi - Eventos | Esta página contém uma lista de eventos dos quais vamos participar e vender nosso chopp interstellar' });
+
     this.timerSubscription = interval(1000).subscribe(() => {
       for (const event of this.events) {
         event.timeDiff = this.calculateTimeDiff(event.date);
