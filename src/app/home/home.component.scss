@@ -3,6 +3,11 @@ h1, h2 {
   }
 
   h2{
+    font-size: 3rem;
+  }
+
+  h3{
+    font-size: 2.0rem;
     margin-bottom: 50px;
   }
   
@@ -14,6 +19,12 @@ h1, h2 {
   p {   
     font-family: 'NavhiFont';   
   }
+
+  .subtitulo{
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  
 
   .hero-image {
     background: url('../../assets/imgs/Background-Alien.avif') center center no-repeat;
@@ -72,7 +83,11 @@ h1, h2 {
   } 
   
   h2 {
-    font-size: 1.5em;  // Diminuir o tamanho da fonte
+    font-size: 1.5rem !important;  // Diminuir o tamanho da fonte
+  }
+
+  h3 {
+    font-size: 1.5rem;
   }
 
   .hero-image {
