@@ -12,6 +12,8 @@ import { ProductsComponent } from './products/products.component';
 import { EventsComponent } from './events/events.component';
 import { Subscription } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
+import { AgeVerificationComponent } from './age-verification/age-verification.component';
+import { ProhibitedContentComponent } from './prohibited-content/prohibited-content.component';
 
 
 
@@ -22,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
      HomeComponent,
      ContactUsComponent,
      ProductsComponent,
-     EventsComponent,     
+     EventsComponent,
+     AgeVerificationComponent,
+     ProhibitedContentComponent,     
   ],
   imports: [
     BrowserModule,

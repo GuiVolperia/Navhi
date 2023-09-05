@@ -1,4 +1,8 @@
-<div class="container">
+<app-age-verification *ngIf="isAgeVerified == null" (ageVerified)="onAgeVerified($event)"></app-age-verification>
+<app-prohibited-content *ngIf="!isAgeVerified && showUnderage"></app-prohibited-content>
+
+
+<div class="container" *ngIf="isAgeVerified">
   <div class="header">
     <nav class="navbar">
       <div class="logo pb-3">

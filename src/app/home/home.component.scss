@@ -1,6 +1,10 @@
 h1, h2 { 
     font-family: 'NavhiFont';   
   }
+
+  h2{
+    margin-bottom: 50px;
+  }
   
   img {
     max-width: 100%;
@@ -62,7 +66,7 @@ h1, h2 {
   transform: scale(0.9); /* Efeito de redução (10%) no clique */
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 768px) {
   h1 {
       font-size: 2em;  // Diminuir o tamanho da fonte
   } 

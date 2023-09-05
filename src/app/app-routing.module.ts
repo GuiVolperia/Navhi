@@ -5,13 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ProductsComponent } from './products/products.component';
 import { EventsComponent } from './events/events.component';
+import { ProhibitedContentComponent } from './prohibited-content/prohibited-content.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'sobre', component: AboutUsComponent },
   { path: 'contato', component: ContactUsComponent },
   { path: 'chopps', component: ProductsComponent },
-  { path: 'eventos', component: EventsComponent }
+  { path: 'eventos', component: EventsComponent },
+  { path: 'menor-idade', component: ProhibitedContentComponent }
 ];
 
 @NgModule({
