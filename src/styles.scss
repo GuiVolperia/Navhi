@@ -14,22 +14,56 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+label,
+a, span {
     font-family: 'NavhiFont';
-    color: rgb(33, 0, 45) !important;
-    /* Use the name you've provided in @font-face */
+    color: rgb(33, 0, 45);
 }
+
+/* Headings */
+h1 {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+span{
+    font-size: 2em;
+}
+
+
 
 img {
     max-width: 100%;
     height: auto;
 }
 
+
 .corBranca {
     color: white !important;
 }
 
-.corRoxa {    
+.corRoxa {
     color: rgb(33, 0, 45) !important;
 }
 
@@ -49,12 +83,7 @@ img {
     padding: 50px 0;
 }
 
-a,
-label,
-input,
-button {
-    font-family: 'NavhiFont';
-}
+
 
 .content {
     background-color: white;
@@ -165,29 +194,60 @@ button {
     font-size: 24px !important;
 }
 
-.fs-rem-15{
+.fs-rem-15 {
     font-size: 1.5rem;
 }
 
-.fs-rem-25{
-    font-size: 2.5rem ;
+.fs-rem-25 {
+    font-size: 2.5rem;
 }
 
-.fonteNavhi{
-    font-family: 'NavhiFont';   
+.fonteNavhi {
+    font-family: 'NavhiFont';
 }
 
 .txtBoxNavhi {
-    font-family: 'NavhiFont';   
+    font-family: 'NavhiFont';
 }
 
-.txtBoxNavhi:focus {        
+.txtBoxNavhi:focus {
     box-shadow: 0 0 0 0.10rem rgb(33, 0, 45) !important;
 }
 
 @media (max-width: 768px) {
+
+    /* Headings */
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.75em;
+    }
+
+    h4 {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1.25em;
+    }
+
+    h6 {
+        font-size: 1em;
+    }
+
+    span{
+        font-size: 1.5em;
+    }
+
     .bordaLetraRoxa {
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: rgb(33, 0, 45) !important;
     }
-  }
+}

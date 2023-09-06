@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   showUnderage: boolean = false;
 
 
-  constructor(private router: Router, private titleService: Title, private metaService: Meta) { }
+  constructor(public router: Router, private titleService: Title, private metaService: Meta) { }
 
   @ViewChild('navMenu', { static: false }) navMenu!: ElementRef;
 

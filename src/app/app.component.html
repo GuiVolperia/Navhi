@@ -3,16 +3,18 @@
 
 
 <div class="container" *ngIf="isAgeVerified">
-  <div class="header">
+  
+  <!-- Semantic Header -->
+  <header class="header">
     <nav class="navbar">
-      <div class="logo pb-3">
+      <div class="logo">
         <a routerLink="/">
           <img src="assets/imgs/logo.avif" alt="Logo da Cervejaria" class="img-fluid mr-1 pd-0" style="max-width: 25px;">
-          <span class="fs-24">Navhi</span>
+          <span>Navhi</span>
         </a>
       </div>
 
-      <!-- Hamburger menu -->
+      <!-- Hamburger Menu -->
       <button class="hamburger-menu" (click)="toggleMenu()">
         <span></span>
         <span></span>
@@ -21,19 +23,25 @@
       </button>
 
       <ul class="nav-links" #navMenu>
-        <li><a routerLink="/chopps" (click)="toggleMenu()">Chopps</a></li>
-        <li><a routerLink="/eventos" (click)="toggleMenu()">Eventos</a></li>
-        <li><a routerLink="/sobre" (click)="toggleMenu()">Sobre a Navhi</a></li>
-        <li><a routerLink="/contato" (click)="toggleMenu()">Vem Trocar ideia</a></li>
+        <li [ngClass]="{ 'activeRouteLink': router.url === '/chopps' }"><a routerLink="/chopps" (click)="toggleMenu()">Chopps</a></li>
+        <li [ngClass]="{ 'activeRouteLink': router.url === '/eventos' }"><a routerLink="/eventos" (click)="toggleMenu()">Eventos</a></li>
+        <li [ngClass]="{ 'activeRouteLink': router.url === '/sobre' }"><a routerLink="/sobre" (click)="toggleMenu()">Sobre a Navhi</a></li>
+        <li [ngClass]="{ 'activeRouteLink': router.url === '/contato' }"><a routerLink="/contato" (click)="toggleMenu()">Vem Trocar ideia</a></li>
       </ul>
     </nav>
-  </div>
+  </header>
 
-  <div class="content">
+  <!-- Principal Content -->
+  <main class="content">
     <router-outlet></router-outlet>
+  </main>
+
+  <!-- Footer -->
+  <footer>
     <div class="text-center mt-5 fonteNavhi">
       &copy; {{ currentYear }} Navhi. Todos os direitos reservados. Desenvolvido por : <a class="corRoxa"
         href="https://www.instagram.com/guilherme.volpe/">Guilherme Volpe</a>
     </div>
-  </div>
+  </footer>
+
 </div>
