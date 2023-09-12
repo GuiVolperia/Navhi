@@ -1,64 +1,60 @@
-h1, h2 { 
-    font-family: 'NavhiFont';   
-  }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-  h2{
-    font-size: 3rem;
-  }
+p {
+  font-family: 'NavhiFont';
+}
 
-  h3{
-    font-size: 2.0rem;
-    margin-bottom: 50px;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  p {   
-    font-family: 'NavhiFont';   
-  }
+.subtitulo {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
 
-  .subtitulo{
-    font-size: 2.5rem;
-    font-weight: 300;
-  }
-  
+.first-row-home {
+  margin-top: 0em;
+}
 
-  .hero-image {
-    background: url('../../assets/imgs/Background-Alien.avif') center center no-repeat;
-    background-size: cover;  // Isso fará com que a imagem cubra toda a div
-    height: 1000px;;  // Ajuste conforme necessário, 80vh irá ocupar 80% da altura da janela    
-  }
 
-  .imagensHome {
-    background-size: cover;
-    border: solid 50px;
-    color: rgb(33, 0, 45) !important;    
-  }
+.hero-image {
+  background: url('../../assets/imgs/Background-Alien.avif') center center no-repeat;
+  background-size: cover; // Isso fará com que a imagem cubra toda a div
+  height: 1000px;
+  ; // Ajuste conforme necessário, 80vh irá ocupar 80% da altura da janela    
+}
 
-  .letraBranca {
-    color: white !important;
-  }
+.imagensHome {
+  background-size: cover;
+  border: solid 50px;
+  color: rgb(33, 0, 45) !important;
+  height: 100%;
+}
 
-  .social-icons a {    
-    font-size: 40px;  /* Tamanho dos ícones */
-    transition: 0.3s;  /* Transição suave ao passar o mouse */
+.social-icons a {
+  font-size: 40px;
+  /* Tamanho dos ícones */
+  transition: 0.3s;
+  /* Transição suave ao passar o mouse */
 }
 
 
 .social-icon-link {
   display: inline-block;
-  background-color: rgb(33, 0, 45); /* Cor de fundo roxa */
+  background-color: rgb(33, 0, 45);
+  /* Cor de fundo roxa */
   border-radius: 50%;
-  width: 80px;  /* Define o tamanho do círculo */
+  width: 80px;
+  /* Define o tamanho do círculo */
   height: 80px;
-  margin-right: 5px; /* Espaço entre os ícones */
-  text-align: center; 
+  margin-right: 5px;
+  /* Espaço entre os ícones */
+  text-align: center;
   vertical-align: middle;
-  line-height: 70px; /* Centraliza verticalmente o ícone dentro do círculo */
-  transition: background-color 0.3s, transform 0.3s; /* Adicionado transform para a transição do efeito scale */
+  line-height: 70px;
+  /* Centraliza verticalmente o ícone dentro do círculo */
+  transition: background-color 0.3s, transform 0.3s;
+  /* Adicionado transform para a transição do efeito scale */
 }
 
 .social-icon-link i {
@@ -66,50 +62,42 @@ h1, h2 {
 }
 
 .social-icon-link:hover {
-  background-color: white; /* Cor de fundo branco no hover */
+  background-color: white;
+  /* Cor de fundo branco no hover */
 }
 
 .social-icon-link:hover i {
-  color: purple; /* Ícone roxo no hover */
+  color: purple;
+  /* Ícone roxo no hover */
 }
 
 .social-icon-link:active {
-  transform: scale(0.9); /* Efeito de redução (10%) no clique */
+  transform: scale(0.9);
+  /* Efeito de redução (10%) no clique */
 }
 
-@media (max-width: 768px) {
-  h1 {
-      font-size: 2em;  // Diminuir o tamanho da fonte
-  } 
-  
-  h2 {
-    font-size: 1.5rem !important;  // Diminuir o tamanho da fonte
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
+@media (max-width: 1024px) { 
 
   .hero-image {
-      height: 600px;  // Reduzir a altura para telas menores
+    height: 600px; // Reduzir a altura para telas menores
   }
 
   .imagensHome {
-      border: solid 30px;  // Reduzir a borda      
+    border: solid 30px; // Reduzir a borda      
   }
 
-  .social-icons a {    
-      font-size: 30px;  // Diminuir o tamanho dos ícones
+  .social-icons a {
+    font-size: 30px; // Diminuir o tamanho dos ícones
   }
 
   .social-icon-link {
-      width: 50px;  // Diminuir o tamanho do círculo
-      height: 50px;
-      margin-right: 3px; // Reduzir o espaço entre os ícones
-      line-height: 45px; // Centralizar verticalmente o ícone dentro do círculo reduzido
+    width: 50px; // Diminuir o tamanho do círculo
+    height: 50px;
+    margin-right: 3px; // Reduzir o espaço entre os ícones
+    line-height: 45px; // Centralizar verticalmente o ícone dentro do círculo reduzido
   }
 
-  .description{
-    margin-top: 12%;
+  .first-row-home {
+    margin-top: 3em;
   }
 }

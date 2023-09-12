@@ -50,14 +50,15 @@ h6 {
 span{
     font-size: 2em;
 }
-
+p {
+    font-size: 1.5em;
+}
 
 
 img {
     max-width: 100%;
     height: auto;
 }
-
 
 .corBranca {
     color: white !important;
@@ -82,8 +83,6 @@ img {
     width: 100%;
     padding: 50px 0;
 }
-
-
 
 .content {
     background-color: white;
@@ -142,19 +141,37 @@ img {
 
     /* Efeitos adicionais para hover e active, para uma melhor interação do usuário */
     &:hover {
-        background-color: rgba(33, 0, 45, 0.1);
+        background-color: rgb(33, 0, 45);
         /* Uma leve mudança de cor no hover */
         color: white !important;
         border: solid 2px white;
     }
 
     &:active {
-        background-color: rgba(33, 0, 45, 0.2);
+        background-color: rgb(33, 0, 45);
         /* Uma cor ligeiramente mais escura no active */
         transform: scale(0.95);
         /* Faz o botão parecer um pouco pressionado quando ativo */
     }
 }
+
+.position-relative {
+    position: relative;
+    background-size: cover;
+ 
+}
+
+.img-button {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;       
+    transform: translateX(-50%);    
+}
+
+.img-button:active{
+    transform: scale(0.95) translateX(-50%);
+}
+
 
 //Spacing
 .ml-1 {
@@ -214,11 +231,11 @@ img {
     box-shadow: 0 0 0 0.10rem rgb(33, 0, 45) !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     /* Headings */
     h1 {
-        font-size: 2.5em;
+        font-size: 3em;
         margin-bottom: 0.5em;
     }
 
@@ -246,8 +263,16 @@ img {
         font-size: 1.5em;
     }
 
+    p {
+        font-size: 1em;
+    }
+
     .bordaLetraRoxa {
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: rgb(33, 0, 45) !important;
+    }
+
+    .img-button {
+        font-size: 1em;   
     }
 }

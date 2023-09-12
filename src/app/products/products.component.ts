@@ -12,7 +12,7 @@ export class ProductsComponent implements OnInit {
     {
       id: 1,
       name: 'Therra Ale',
-      description: 'Chopp mais leve sem glutém',
+      description: 'Cerveja mais leve sem glutém',
       ingredients: 'Malte X, Lupulo Y',
       price: 30, img: 'assets/imgs/therra-rotulo.avif'
     },
@@ -20,7 +20,7 @@ export class ProductsComponent implements OnInit {
     {
       id: 2,
       name: 'Osiris Session IPA',
-      description: 'Nosso IPA',
+      description: 'Nossa IPA',
       ingredients: 'Malte X, Lupulo Y',
       price: 35,
       img: 'assets/imgs/osiris-rotulo.avif'
@@ -28,7 +28,7 @@ export class ProductsComponent implements OnInit {
     {
       id: 3,
       name: 'Kemet Black Ipa',
-      description: 'Um Black IPA Interstellar',
+      description: 'Uma Black IPA Interstellar',
       ingredients: 'Malte X, Lupulo Y',
       price: 45,
       img: 'assets/imgs/kemet-rotulo.avif'
