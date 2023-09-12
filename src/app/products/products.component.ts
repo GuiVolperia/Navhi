@@ -37,20 +37,14 @@ export class ProductsComponent implements OnInit {
 
   constructor(private titleService: Title, private metaService: Meta) { }
 
+  productSelected(product: any) {    
+    const number = '+557598361956'
+    const url = `https://wa.me/${number}?text=Olá,%20Quero%20Fazer%20Um%20Pedido,%20Me%20Interessei%20Pela%20"${product.name}"`;
+    window.open(url, '_blank'); 
+  }
+
   ngOnInit(): void {
     this.titleService.setTitle('Navhi - Chopps');
     this.metaService.addTag({ name: 'description', content: 'Navhi - Chopps | Esta página contém uma lista dos nossos chopps interstellares.' });
-  }
-
-  productSelected(product: any) {    
-    Swal.fire({
-      title: 'Aviso!',
-      text: 'Estamos trabalhando na construção da nossa loja aqui.',
-      icon: 'warning',
-      confirmButtonColor: '#ffff66',
-      confirmButtonText: 'Entendido'
-    });
-
-  }
-
+  }  
 }
