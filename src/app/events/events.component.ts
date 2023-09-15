@@ -34,7 +34,6 @@ export class EventsComponent implements OnInit, OnDestroy {
         event.timeDiff = this.calculateTimeDiff(event.date);
       }
     });
-    
   }
 
   ngOnDestroy(): void {

@@ -8,8 +8,11 @@ import Swal from 'sweetalert2';
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss']
 })
+
 export class ContactUsComponent implements OnInit {
 
+
+  
   contact = {
     name: '',
     email: '',
@@ -28,7 +31,7 @@ export class ContactUsComponent implements OnInit {
     Swal.showLoading();
 
 
-    this.http.post('http://localhost:3000/send-email', this.contact)
+    this.http.post('https://quiet-gorge-71000-b9dce4d92a29.herokuapp.com/send-email', this.contact)
       .subscribe(
         response => {
           Swal.close(); 
