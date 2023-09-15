@@ -92,6 +92,11 @@
     background-color: #555;
 }
 
+.no-events-message {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: 50px;  /* Adiciona uma margem superior de 50px */
+}
+
 @media (max-width: 767px) {
     .event-card {
         flex-direction: column;

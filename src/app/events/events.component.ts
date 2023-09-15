@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { interval, Subscription } from 'rxjs';
-import { mapTo, scan } from 'rxjs/operators';
+import { EventInterface } from './event-interface';
 
 @Component({
   selector: 'app-events',
@@ -9,30 +9,14 @@ import { mapTo, scan } from 'rxjs/operators';
   styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit, OnDestroy {
-  events = [
-    {
-      name: 'Evento 1',
-      date: new Date('2023-09-05T08:00:00'),
-      description: 'Descrição do Evento 1',
-      timeDiff: '',
-      flyer: '../../assets/imgs/therra-rotulo.avif'
-    },
-    
-    {
-      name: 'Evento 2',
-      date: new Date('2023-10-09T08:00:00'),
-      description: 'Descrição do Evento 1',
-      timeDiff: '',
-      flyer: '../../assets/imgs/therra-rotulo.avif'
-    },
-
-    {
-      name: 'Evento 3',
-      date: new Date('2023-12-31T08:00:00'),
-      description: 'Descrição do Evento 1',
-      timeDiff: '',
-      flyer: '../../assets/imgs/therra-rotulo.avif'
-    }    
+  events : EventInterface[] = [
+    // {
+    //   name: 'Evento 1',
+    //   date: new Date('2023-09-30T08:00:00'),
+    //   description: 'Descrição do Evento 1',
+    //   timeDiff: '',
+    //   flyer: '../../assets/imgs/therra-rotulo.avif'
+    // }
   ];
 
   constructor(private titleService: Title, private metaService: Meta) { }

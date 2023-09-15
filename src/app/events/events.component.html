@@ -1,13 +1,19 @@
-<div class="event-card" *ngFor="let event of events">
-    <div class="event-details">
-        <h3>{{ event.name }}</h3>
-        <p>Descrição: {{ event.description }}</p>
-        <p>Quando vai ser: {{ event.date | date:'dd/MM/yy' }}</p>
-        <p>Às : {{ event.date | date:'HH:mm' }} Horas</p>
-        <button class="botaoNavhi">Saiba mais</button>
+<ng-container *ngIf="events && events.length > 0; else noEvents">
+    <div class="event-card" *ngFor="let event of events">
+        <div class="event-details">
+            <h3>{{ event.name }}</h3>
+            <p>Descrição: {{ event.description }}</p>
+            <p>Quando vai ser: {{ event.date | date:'dd/MM/yy' }}</p>
+            <p>Às : {{ event.date | date:'HH:mm' }} Horas</p>
+            <button class="botaoNavhi">Saiba mais</button>
+        </div>
+        <div class="flyer-container">
+            <img [src]="event.flyer" alt="{{ event.name }}" class="event-flyer">
+            <a class="centered-text">{{ event.timeDiff }}</a>
+        </div>
     </div>
-    <div class="flyer-container">
-        <img [src]="event.flyer" alt="{{ event.name }}" class="event-flyer">
-        <a class="centered-text">{{ event.timeDiff }}</a>
-    </div>
-</div>
+</ng-container>
+
+<ng-template #noEvents>
+    <h1 class="no-events-message">Não há eventos no momento</h1>
+</ng-template>
