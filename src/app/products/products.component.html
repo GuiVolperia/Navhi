@@ -5,7 +5,8 @@
         <h2 class="corBranca">{{ product.name }}</h2>
         <div class="image-container">
             <img [src]="product.img" alt="{{ product.name }}" class="imagem1">
-        </div>        
+            <i class="fa fa-search-plus loupe-icon" *ngIf="isDesktop" (click)="showImageInPopup(product.img)"></i>
+        </div>           
         <p class="corBranca">{{ product.description }}</p>
         <p class="corBranca">Ingredientes: {{ product.ingredients }}</p>
         <p class="corBranca">Preço: R${{ product.price }}</p>

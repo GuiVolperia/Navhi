@@ -22,7 +22,6 @@
   max-height: 200px; // Limita a altura para evitar imagens muito altas
   object-fit: cover; // Garante que a imagem cubra o espaço sem distorção
   border-radius: 8px; // Bordas arredondadas para estética
-  margin-bottom: 1rem; // Espaçamento abaixo da imagem
 }
 
 .btn-container {
@@ -36,4 +35,52 @@ p {
 
 h3 {
   margin-bottom: 10px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.loupe-icon {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 1em;
+  /* Ajuste o tamanho conforme necessário */
+  cursor: pointer;
+  color: white;
+  /* ou qualquer outra cor que você deseja para o ícone */
+  padding: 0.5em;
+  border-radius: 50%;
+  background-color: rgb(33, 0, 45);
+
+}
+
+.loupe-icon:hover {
+  color: rgb(33, 0, 45);
+  background-color: white;
+}
+
+.loupe-icon:active {
+  transform: scale(0.95);
+}
+
+.swal2-image-custom {
+  width: 100%; // a imagem ocupará toda a largura do popup
+  max-height: 80vh; // para garantir que a imagem não ultrapasse a altura da viewport
+  object-fit: cover; // mantém o aspecto da imagem
+}
+
+
+@media (max-width: 1024px) {
+  .swal2-image-custom {
+      max-height: 90vh; // Ou até mesmo 70vh se você quiser que seja um pouco maior
+      /* Outros ajustes que você desejar para dispositivos móveis */
+  }
+  
+  /* Ajustando o tamanho geral do popup em dispositivos móveis */
+  .swal2-popup {
+      width: 90% !important; // Ocupa a maior parte da largura da tela
+      padding: 1.25em !important;
+  }
 }
