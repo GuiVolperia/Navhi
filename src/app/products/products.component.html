@@ -2,16 +2,17 @@
 
 <div class="products-container mt-5">  
     <div *ngFor="let product of products" class="product-card">
-        <h2 class="corBranca">{{ product.name }}</h2>
+        <h4 class="corBranca">{{ product.name }}</h4>
         <div class="image-container">
             <img [src]="product.img" alt="{{ product.name }}" class="imagem1">
             <i class="fa fa-search-plus loupe-icon" *ngIf="isDesktop" (click)="showImageInPopup(product.img)"></i>
         </div>           
-        <p class="corBranca">{{ product.description }}</p>
+        <h5 class="corBranca mt-3">{{ product.description }}</h5>
         <p class="corBranca">Ingredientes: {{ product.ingredients }}</p>
         <p class="corBranca">Preço: R${{ product.price }}</p>
         <div class="btn-container">
-            <button type="button" class="botaoNavhiBranco mt-2" (click)="productSelected(product)" >Eu quero!</button>
+            <button type="button" class="botaoNavhiBranco mt-2" [disabled]="product.units === 0"
+             (click)="productSelected(product)" >{{ product.units === 0 ? 'Esgotado' : 'Eu quero!' }}</button>
         </div>
     </div>
 </div>

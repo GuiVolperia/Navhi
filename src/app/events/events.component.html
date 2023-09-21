@@ -2,13 +2,14 @@
     <div class="event-card" *ngFor="let event of events">
         <div class="event-details">
             <h3>{{ event.name }}</h3>
-            <p>Descrição: {{ event.description }}</p>
-            <p>Quando vai ser: {{ event.date | date:'dd/MM/yy' }}</p>
-            <p>Às : {{ event.date | date:'HH:mm' }} Horas</p>
-            <button class="botaoNavhi">Saiba mais</button>
+            <p>{{ event.description }}</p>
+            <p>Dia: {{ event.date | date:'dd/MM/yy' }}</p>
+            <p>Às: {{ event.date | date:'HH:mm' }} Horas</p>
+            <p>Local: {{ event.place }}</p>
+            <button class="botaoNavhi" (click)="redirectEventPage(event)">Saiba mais</button>
         </div>
         <div class="flyer-container">
-            <img [src]="event.flyer" alt="{{ event.name }}" class="event-flyer">
+            <img [src]="event.flyer" alt="{{ event.name }}" class="event-flyer">            
             <a class="centered-text">{{ event.timeDiff }}</a>
         </div>
     </div>

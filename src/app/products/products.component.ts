@@ -15,26 +15,29 @@ export class ProductsComponent implements OnInit {
       id: 1,
       name: 'Therra Ale',
       description: 'Cerveja mais leve sem glutém',
-      ingredients: 'Malte X, Lupulo Y',
+      ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
       price: 30,
-      img: 'assets/imgs/therra-rotulo.avif'
+      img: 'assets/imgs/therra-rotulo.avif',
+      units: 16
     },
 
     {
       id: 2,
       name: 'Osiris Session IPA',
       description: 'Nossa IPA',
-      ingredients: 'Malte X, Lupulo Y',
+      ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
       price: 35,
-      img: 'assets/imgs/osiris-rotulo.avif'
+      img: 'assets/imgs/osiris-rotulo.avif',
+      units: 16
     },
     {
       id: 3,
       name: 'Kemet Black Ipa',
       description: 'Uma Black IPA Interstellar',
-      ingredients: 'Malte X, Lupulo Y',
+      ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
       price: 45,
-      img: 'assets/imgs/kemet-rotulo.avif'
+      img: 'assets/imgs/kemet-rotulo.avif',
+      units: 0
     }
   ];
 

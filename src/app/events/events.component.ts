@@ -10,13 +10,15 @@ import { EventInterface } from './event-interface';
 })
 export class EventsComponent implements OnInit, OnDestroy {
   events : EventInterface[] = [
-    // {
-    //   name: 'Evento 1',
-    //   date: new Date('2023-09-30T08:00:00'),
-    //   description: 'Descrição do Evento 1',
-    //   timeDiff: '',
-    //   flyer: '../../assets/imgs/therra-rotulo.avif'
-    // }
+    {
+      name: 'Reggae Na Praça',
+      date: new Date('2023-09-24T16:00:00'),
+      description: '17ª Edição do Reggae na Praça',
+      place: 'Praça do Faveral - Araraquara',
+      timeDiff: '',
+      flyer: '../../assets/imgs/reggae-na-praca-24-09.avif',
+      url:'https://www.instagram.com/p/CxD2lN6OAyj/'
+    }
   ];
 
   constructor(private titleService: Title, private metaService: Meta) { }
@@ -24,6 +26,9 @@ export class EventsComponent implements OnInit, OnDestroy {
 
   private timerSubscription!: Subscription;
 
+  redirectEventPage(event: EventInterface): void {
+    window.open(event.url, '_blank');
+  }
 
   ngOnInit(): void {
     this.titleService.setTitle('Navhi - Eventos');

@@ -16,7 +16,8 @@ h3,
 h4,
 h5,
 label,
-a, span {
+a,
+span {
     font-family: 'NavhiFont';
     color: rgb(33, 0, 45);
 }
@@ -47,9 +48,10 @@ h6 {
     font-size: 1em;
 }
 
-span{
+span {
     font-size: 2em;
 }
+
 p {
     font-size: 1.5em;
 }
@@ -153,22 +155,33 @@ img {
         transform: scale(0.95);
         /* Faz o botão parecer um pouco pressionado quando ativo */
     }
+
+    &:disabled {
+        background-color: #f1f1f1;
+        /* Cinza claro para indicar que está desabilitado */
+        color: rgb(180, 180, 180) !important;
+        /* Um tom de cinza para o texto */
+        border: 2px solid rgb(180, 180, 180);
+        /* Bordas em cinza */
+        cursor: not-allowed;
+        /* Cursor que indica que o botão está desabilitado */
+    }
 }
 
 .position-relative {
     position: relative;
     background-size: cover;
- 
+
 }
 
 .img-button {
     position: absolute;
     bottom: 10%;
-    left: 50%;       
-    transform: translateX(-50%);    
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.img-button:active{
+.img-button:active {
     transform: scale(0.95) translateX(-50%);
 }
 
@@ -259,7 +272,7 @@ img {
         font-size: 1em;
     }
 
-    span{
+    span {
         font-size: 1.5em;
     }
 
@@ -273,6 +286,6 @@ img {
     }
 
     .img-button {
-        font-size: 1em;   
+        font-size: 1em;
     }
 }

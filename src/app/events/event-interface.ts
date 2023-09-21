@@ -4,4 +4,6 @@ export interface EventInterface {
     description: string;
     timeDiff: string;
     flyer: string;
+    url: string;
+    place: string
   }
