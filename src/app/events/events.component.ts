@@ -9,20 +9,20 @@ import { EventInterface } from './event-interface';
   styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit, OnDestroy {
-  events : EventInterface[] = [
-    {
-      name: 'Reggae Na Praça',
-      date: new Date('2023-09-24T16:00:00'),
-      description: '17ª Edição do Reggae na Praça',
-      place: 'Praça do Faveral - Araraquara',
-      timeDiff: '',
-      flyer: '../../assets/imgs/reggae-na-praca-24-09.avif',
-      url:'https://www.instagram.com/p/CxD2lN6OAyj/'
-    }
+  events: EventInterface[] = [
+    // {
+    //   name: 'Reggae Na Praça',
+    //   date: new Date('2023-09-24T16:00:00'),
+    //   description: '17ª Edição do Reggae na Praça',
+    //   place: 'Praça do Faveral - Araraquara',
+    //   timeDiff: '',
+    //   flyer: '../../assets/imgs/reggae-na-praca-24-09.avif',
+    //   url: 'https://www.instagram.com/p/CxD2lN6OAyj/'
+    // }
   ];
 
   constructor(private titleService: Title, private metaService: Meta) { }
-    
+
 
   private timerSubscription!: Subscription;
 
@@ -49,6 +49,13 @@ export class EventsComponent implements OnInit, OnDestroy {
 
   calculateTimeDiff(targetDate: Date): string {
     const now = new Date();
+
+    if (now.getFullYear() === targetDate.getFullYear() &&
+      now.getMonth() === targetDate.getMonth() &&
+      now.getDate() === targetDate.getDate()) {
+      return 'É Hoje';
+    }
+
     let diffInSeconds = Math.floor((targetDate.getTime() - now.getTime()) / 1000);
 
     const days = Math.floor(diffInSeconds / (3600 * 24));

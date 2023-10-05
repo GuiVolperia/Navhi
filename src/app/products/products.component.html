@@ -10,6 +10,7 @@
         <h5 class="corBranca mt-3">{{ product.description }}</h5>
         <p class="corBranca">Ingredientes: {{ product.ingredients }}</p>
         <p class="corBranca">Preço: R${{ product.price }}</p>
+        <p class="corBranca">{{ product.amount }}</p>
         <div class="btn-container">
             <button type="button" class="botaoNavhiBranco mt-2" [disabled]="product.units === 0"
              (click)="productSelected(product)" >{{ product.units === 0 ? 'Esgotado' : 'Eu quero!' }}</button>

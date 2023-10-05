@@ -18,7 +18,8 @@ export class ProductsComponent implements OnInit {
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
       price: 30,
       img: 'assets/imgs/therra-rotulo.avif',
-      units: 16
+      units: 16,
+      amount: '1 Litro'
     },
 
     {
@@ -28,7 +29,8 @@ export class ProductsComponent implements OnInit {
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
       price: 35,
       img: 'assets/imgs/osiris-rotulo.avif',
-      units: 16
+      units: 16,
+      amount: '1 Litro'
     },
     {
       id: 3,
@@ -37,7 +39,8 @@ export class ProductsComponent implements OnInit {
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
       price: 45,
       img: 'assets/imgs/kemet-rotulo.avif',
-      units: 0
+      units: 20,
+      amount: '1 Litro'
     }
   ];
 
