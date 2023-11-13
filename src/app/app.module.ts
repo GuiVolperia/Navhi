@@ -4,16 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { HomeComponent } from './home/home.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { FormsModule } from '@angular/forms';
-import { ProductsComponent } from './products/products.component';
-import { EventsComponent } from './events/events.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { EventsComponent } from './pages/events/events.component';
 import { Subscription } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
-import { AgeVerificationComponent } from './age-verification/age-verification.component';
-import { ProhibitedContentComponent } from './prohibited-content/prohibited-content.component';
+
+import { ProhibitedContentComponent } from './pages/prohibited-content/prohibited-content.component';
+import { AgeVerificationComponent } from './pages/age-verification/age-verification.component';
+import { KitsComponent } from './pages/kits/kits.component';
 
 
 
@@ -26,7 +28,8 @@ import { ProhibitedContentComponent } from './prohibited-content/prohibited-cont
      ProductsComponent,
      EventsComponent,
      AgeVerificationComponent,
-     ProhibitedContentComponent,     
+     ProhibitedContentComponent,
+     KitsComponent,     
   ],
   imports: [
     BrowserModule,

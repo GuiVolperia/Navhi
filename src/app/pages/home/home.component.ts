@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
     productSelected(name : string) {    
       const number = '+5519983672710'
-      const url = `https://wa.me/${number}?text=Olá,%20Quero%20Fazer%20Um%20Pedido,%20Me%20Interessei%20Pela%20"${name}"`;
+      const url = `https://wa.me/${number}?text=Olá,%20Quero%20Fazer%20Um%20Pedido,%20Me%20Interessei%20Pelo%20"${name}"`;
       window.open(url, '_blank'); 
     }
 

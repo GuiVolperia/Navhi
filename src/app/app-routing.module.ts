@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { HomeComponent } from './home/home.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { ProductsComponent } from './products/products.component';
-import { EventsComponent } from './events/events.component';
-import { ProhibitedContentComponent } from './prohibited-content/prohibited-content.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { EventsComponent } from './pages/events/events.component';
+import { ProhibitedContentComponent } from './pages/prohibited-content/prohibited-content.component';
+import { KitsComponent } from './pages/kits/kits.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'sobre', component: AboutUsComponent },
   { path: 'contato', component: ContactUsComponent },
   { path: 'cervejas', component: ProductsComponent },
+  { path: 'kits', component: KitsComponent },
   { path: 'eventos', component: EventsComponent },
   { path: 'menor-idade', component: ProhibitedContentComponent }
 ];

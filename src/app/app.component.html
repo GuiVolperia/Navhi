@@ -23,6 +23,7 @@
       </button>
 
       <ul class="nav-links" #navMenu>
+        <li [ngClass]="{ 'activeRouteLink': router.url === '/kits' }"><a routerLink="/kits" (click)="toggleMenu()">Kits</a></li>
         <li [ngClass]="{ 'activeRouteLink': router.url === '/cervejas' }"><a routerLink="/cervejas" (click)="toggleMenu()">Cervejas</a></li>
         <li [ngClass]="{ 'activeRouteLink': router.url === '/eventos' }"><a routerLink="/eventos" (click)="toggleMenu()">Eventos</a></li>
         <li [ngClass]="{ 'activeRouteLink': router.url === '/sobre' }"><a routerLink="/sobre" (click)="toggleMenu()">Sobre a Navhi</a></li>

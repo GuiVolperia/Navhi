@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import Swal from 'sweetalert2';
-import { DeviceDetectorService } from '../services/device-detector.service';
+import { DeviceDetectorService } from '../../services/device-detector.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -14,9 +14,9 @@ export class ProductsComponent implements OnInit {
     {
       id: 1,
       name: 'Therra Ale',
-      description: 'Cerveja mais leve sem glutém',
+      description: 'Sabor Extraterrestre, Sem Glúten',
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
-      price: 30,
+      price: 29.99,
       img: 'assets/imgs/therra-rotulo.avif',
       units: 16,
       amount: '1 Litro'
@@ -25,9 +25,9 @@ export class ProductsComponent implements OnInit {
     {
       id: 2,
       name: 'Osiris Session IPA',
-      description: 'Nossa IPA',
+      description: 'Notas Alienígenas',
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
-      price: 35,
+      price: 34.99,
       img: 'assets/imgs/osiris-rotulo.avif',
       units: 16,
       amount: '1 Litro'
@@ -37,7 +37,7 @@ export class ProductsComponent implements OnInit {
       name: 'Kemet Black Ipa',
       description: 'Uma Black IPA Interstellar',
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
-      price: 45,
+      price: 44.99,
       img: 'assets/imgs/kemet-rotulo.avif',
       units: 20,
       amount: '1 Litro'
@@ -74,8 +74,8 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Navhi - Chopps');
-    this.metaService.addTag({ name: 'description', content: 'Navhi - Chopps | Esta página contém uma lista dos nossos chopps interstellares.' });
+    this.titleService.setTitle('Navhi - Cervejas');
+    this.metaService.addTag({ name: 'description', content: 'Navhi - Cervejas | Cervejas Artesanais Interstellares' });
   }
 
   ngOnDestroy() {
