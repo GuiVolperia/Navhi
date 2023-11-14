@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
   isAgeVerified: boolean | null = null;
   showUnderage: boolean = false;
 
-
   constructor(public router: Router, private titleService: Title, private metaService: Meta) { }
 
   @ViewChild('navMenu', { static: false }) navMenu!: ElementRef;
@@ -23,25 +22,22 @@ export class AppComponent implements OnInit {
 
   onAgeVerified(isVerified: boolean): void {
     this.isAgeVerified = isVerified;
-    if (!isVerified) {
+
+    const isGooglebot = /Googlebot/.test(navigator.userAgent);
+
+    if (!isVerified && !isGooglebot) {
       this.showUnderage = true;
     }
   }
 
   ngOnInit(): void {
     this.titleService.setTitle('Navhi Cervejaria');
-  
-    if (this.isAgeVerified) {
-      this.metaService.addTag({ name: 'description', content: 'Cervejaria Artesanal Interstellar - Conheça Nossas Cervejas Intergaláticas' });
-    } else {
-      this.metaService.addTag({ name: 'description', content: 'Navhi - Home | Cervejaria Artesanal Interstellar' });
-    }
-  
+    
+    this.metaService.addTag({ name: 'description', content: 'Navhi - Home | Cervejaria Artesanal Interstellar - Conheça Nossas Cervejas Intergaláticas' });
+
     const isOver18 = localStorage.getItem('isOver18');
     if (isOver18) {
       this.isAgeVerified = true;
     }
   }
-  
-
 }
