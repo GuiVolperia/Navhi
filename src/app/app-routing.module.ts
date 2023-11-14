@@ -7,6 +7,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { EventsComponent } from './pages/events/events.component';
 import { ProhibitedContentComponent } from './pages/prohibited-content/prohibited-content.component';
 import { KitsComponent } from './pages/kits/kits.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
 })
 export class AppRoutingModule { }

@@ -32,7 +32,7 @@ export class EventsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.titleService.setTitle('Navhi - Eventos');
-    this.metaService.addTag({ name: 'description', content: 'Navhi - Eventos | Esta página contém uma lista de eventos dos quais vamos participar e vender nosso chopp interstellar' });
+    this.metaService.addTag({ name: 'description', content: 'Navhi - Eventos | Eventos onde a Navhi estará presente com Cervejas Artesanais Interstellares' });
 
     this.timerSubscription = interval(1000).subscribe(() => {
       for (const event of this.events) {

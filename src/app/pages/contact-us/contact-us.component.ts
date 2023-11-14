@@ -23,7 +23,7 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit(): void {
     this.titleService.setTitle('Navhi - Contato');
-    this.metaService.addTag({ name: 'description', content: 'Navhi - Contato | Entre em contato conosco e peça seu chopp.' });
+    this.metaService.addTag({ name: 'description', content: 'Navhi - Contato | Entre em contato conosco e peça sua Cerveja.' });
   }
 
   onSubmit() {
