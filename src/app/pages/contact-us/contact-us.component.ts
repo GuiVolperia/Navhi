@@ -22,8 +22,8 @@ export class ContactUsComponent implements OnInit {
   constructor(private titleService: Title, private http: HttpClient, private metaService: Meta) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Navhi - Contato');
-    this.metaService.addTag({ name: 'description', content: 'Navhi - Contato | Entre em contato conosco e peça sua Cerveja.' });
+    this.titleService.setTitle('Navhi Interstellar Beer - Contato');
+    this.metaService.addTag({ name: 'description', content: 'Navhi Interstellar Beer - Contato | Sugestões para melhoria da Cervejaria, Dúvidas ou Reclamações' });
   }
 
   onSubmit() {

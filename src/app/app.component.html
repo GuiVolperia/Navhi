@@ -1,8 +1,8 @@
-<app-age-verification *ngIf="isAgeVerified == null" (ageVerified)="onAgeVerified($event)"></app-age-verification>
-<app-prohibited-content *ngIf="!isAgeVerified && showUnderage"></app-prohibited-content>
+<app-age-verification *ngIf="isAgeVerified == null && !isAdmin" (ageVerified)="onAgeVerified($event)"></app-age-verification>
+<app-prohibited-content *ngIf="!isAgeVerified && showUnderage && !isAdmin"></app-prohibited-content>
 
 
-<div class="container" *ngIf="isAgeVerified">
+<div class="container" *ngIf="isAgeVerified && !isAdmin">
   
   <!-- Semantic Header -->
   <header class="header">
@@ -11,6 +11,51 @@
         <a routerLink="/">
           <img src="assets/imgs/logo.avif" alt="Logo da Cervejaria" class="img-fluid mr-1 pd-0" style="max-width: 25px;">
           <span>Navhi</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" #navMenu>
+        <li [ngClass]="{ 'activeRouteLink': router.url === '/kits' }"><a routerLink="/kits" (click)="toggleMenu()">Kits</a></li>
+        <li [ngClass]="{ 'activeRouteLink': router.url === '/cervejas' }"><a routerLink="/cervejas" (click)="toggleMenu()">Cervejas</a></li>
+        <li [ngClass]="{ 'activeRouteLink': router.url === '/eventos' }"><a routerLink="/eventos" (click)="toggleMenu()">Eventos</a></li>
+        <li [ngClass]="{ 'activeRouteLink': router.url === '/sobre' }"><a routerLink="/sobre" (click)="toggleMenu()">Sobre a Navhi</a></li>
+        <li [ngClass]="{ 'activeRouteLink': router.url === '/contato' }"><a routerLink="/contato" (click)="toggleMenu()">Vem Trocar ideia</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Principal Content -->
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text-center mt-5 fonteNavhi">
+      &copy; {{ currentYear }} Navhi. Todos os direitos reservados. Desenvolvido por : <a class="corRoxa"
+        href="https://www.instagram.com/guilherme.volpe/">Guilherme Volpe</a>
+    </div>
+  </footer>
+
+</div>
+
+<div class="container" *ngIf="isAdmin">
+  
+  <!-- Semantic Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <a routerLink="/">
+          <img src="assets/imgs/logo.avif" alt="Logo da Cervejaria" class="img-fluid mr-1 pd-0" style="max-width: 25px;">
+          <span>Navhi Admin</span>
         </a>
       </div>
 

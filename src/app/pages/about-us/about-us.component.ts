@@ -11,7 +11,7 @@ export class AboutUsComponent implements OnInit{
   constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Navhi - Sobre Nós');
-    this.metaService.addTag({ name: 'description', content: 'Navhi - Sobre | Um pouco da nossa história e porque decidimos começar a fabricar o chopp interstellar' });
+    this.titleService.setTitle('Navhi Interstellar Beer - Sobre');
+    this.metaService.addTag({ name: 'description', content: 'Navhi - Sobre | História da Navhi e Propósito da Cervejaria' });
   }
 }

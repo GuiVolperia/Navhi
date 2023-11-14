@@ -8,6 +8,7 @@ import { EventsComponent } from './pages/events/events.component';
 import { ProhibitedContentComponent } from './pages/prohibited-content/prohibited-content.component';
 import { KitsComponent } from './pages/kits/kits.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { AdminModule } from './admin/admin.module';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,11 +17,17 @@ const routes: Routes = [
   { path: 'cervejas', component: ProductsComponent },
   { path: 'kits', component: KitsComponent },
   { path: 'eventos', component: EventsComponent },
-  { path: 'menor-idade', component: ProhibitedContentComponent }
+  { path: 'menor-idade', component: ProhibitedContentComponent },
+
+
+  // Rotas do Admin
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [
+    RouterModule.forRoot(routes, { useHash: true })
+  ],
   exports: [RouterModule],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
 })

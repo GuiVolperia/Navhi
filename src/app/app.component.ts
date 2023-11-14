@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,18 @@ export class AppComponent implements OnInit {
   currentYear: number = new Date().getFullYear();
   isAgeVerified: boolean | null = null;
   showUnderage: boolean = false;
+  isAdmin: boolean = true;
 
-  constructor(public router: Router, private titleService: Title, private metaService: Meta) { }
+  constructor(public router: Router, private titleService: Title, private metaService: Meta) { 
+
+     // Detecta a mudança de rota
+     this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.isAdmin = event.url.includes('/admin');
+    });
+
+  }
 
   @ViewChild('navMenu', { static: false }) navMenu!: ElementRef;
 
@@ -31,9 +42,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Navhi Cervejaria');
+    this.titleService.setTitle('Navhi Interstellar Beer - Cervejaria');
     
-    this.metaService.addTag({ name: 'description', content: 'Navhi - Home | Cervejaria Artesanal Interstellar - Conheça Nossas Cervejas Intergaláticas' });
+    this.metaService.addTag({ name: 'description', content: 'Navhi Interstellar Beer - Home | Cervejaria Artesanal Interstellar - Conheça Nossas Cervejas Intergaláticas' });
 
     const isOver18 = localStorage.getItem('isOver18');
     if (isOver18) {

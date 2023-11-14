@@ -74,8 +74,8 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Navhi - Cervejas');
-    this.metaService.addTag({ name: 'description', content: 'Navhi - Cervejas | Cervejas Artesanais Interstellares' });
+    this.titleService.setTitle('Navhi Interstellar Beer - Cervejas');
+    this.metaService.addTag({ name: 'description', content: 'Navhi Interstellar Beer - Cervejas | Cervejas Artesanais Interstellares' });
   }
 
   ngOnDestroy() {

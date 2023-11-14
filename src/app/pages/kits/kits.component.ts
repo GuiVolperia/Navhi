@@ -53,8 +53,8 @@ export class KitsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Navhi - Kits');
-    this.metaService.addTag({ name: 'description', content: 'Navhi - Kits | Kits de Cervejas Artesanais' });
+    this.titleService.setTitle('Navhi Interstellar Beer - Kits');
+    this.metaService.addTag({ name: 'description', content: 'Navhi Interstellar Beer - Kits | Kits de Cervejas Artesanais' });
   }
 
   ngOnDestroy() {
