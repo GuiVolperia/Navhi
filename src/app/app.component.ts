@@ -25,9 +25,9 @@ export class AppComponent implements OnInit {
 
     const isGooglebot = /Googlebot/.test(navigator.userAgent);
 
-    if (!isVerified && !isGooglebot) {
-      this.showUnderage = true;
-    }
+    // if (!isVerified && !isGooglebot) {
+    //   this.showUnderage = true;
+    // }
   }
 
   ngOnInit(): void {
