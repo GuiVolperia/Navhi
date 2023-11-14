@@ -30,11 +30,18 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.titleService.setTitle('Navhi Cervejaria');
-    this.metaService.addTag({ name: 'description', content: 'Navhi - Home | Cervejaria Interstellar' });
-
+  
+    if (this.isAgeVerified) {
+      this.metaService.addTag({ name: 'description', content: 'Cervejaria Artesanal Interstellar - Conheça Nossas Cervejas Intergaláticas' });
+    } else {
+      this.metaService.addTag({ name: 'description', content: 'Navhi - Home | Cervejaria Artesanal Interstellar' });
+    }
+  
     const isOver18 = localStorage.getItem('isOver18');
-    if (isOver18)
+    if (isOver18) {
       this.isAgeVerified = true;
+    }
   }
+  
 
 }

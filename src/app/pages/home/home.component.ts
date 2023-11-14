@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void {
       this.titleService.setTitle('Navhi Interstellar');
-      this.metaService.addTag({ name: 'description', content: 'Navhi - Home | Somos uma cervejaria que fabrica chopps de maneira artesanal' });
+      this.metaService.addTag({ name: 'description', content: 'Navhi - Home | Cervejaria Artesanal Interstellar - Conheça Nossas Cervejas Intergaláticas' });
     }
 
 }
