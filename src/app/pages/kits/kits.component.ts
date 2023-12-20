@@ -18,7 +18,7 @@ export class KitsComponent implements OnInit {
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
       price: 87.99,
       img: 'assets/imgs/kit-1.avif',
-      units: 16,
+      units: 0,
       amount: '3 Litros'
     }
   ];
