@@ -16,7 +16,7 @@ export class ProductsComponent implements OnInit {
       name: 'Therra Ale',
       description: 'Sabor Extraterrestre, Sem Glúten',
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
-      price: 29.99,
+      price: 31.99,
       img: 'assets/imgs/therra-rotulo.avif',
       units: 16,
       amount: '1 Litro'
@@ -27,7 +27,7 @@ export class ProductsComponent implements OnInit {
       name: 'Osiris Session IPA',
       description: 'Notas Alienígenas',
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
-      price: 34.99,
+      price: 35.99,
       img: 'assets/imgs/osiris-rotulo.avif',
       units: 16,
       amount: '1 Litro'
@@ -37,7 +37,7 @@ export class ProductsComponent implements OnInit {
       name: 'Kemet Black Ipa',
       description: 'Uma Black IPA Interstellar',
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
-      price: 44.99,
+      price: 46.99,
       img: 'assets/imgs/kemet-rotulo.avif',
       units: 20,
       amount: '1 Litro'
