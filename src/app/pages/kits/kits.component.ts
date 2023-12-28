@@ -16,9 +16,9 @@ export class KitsComponent implements OnInit {
       name: 'Kit Interstellar',
       description: 'Therra + Osíris + Kemet',
       ingredients: 'Água Mineral Natural, Malte de Cevada e Lúpulo',
-      price: 87.99,
+      price: 103.47,
       img: 'assets/imgs/kit-1.avif',
-      units: 0,
+      units: 20,
       amount: '3 Litros'
     }
   ];
