@@ -19,7 +19,8 @@ export class ProductsComponent implements OnInit {
       price: 31.99,
       img: 'assets/imgs/therra-rotulo.avif',
       units: 16,
-      amount: '1 Litro'
+      amount: '1 Litro',
+      abvIbu: 'ABV 4,9% | IBU 21'
     },
 
     {
@@ -30,7 +31,8 @@ export class ProductsComponent implements OnInit {
       price: 35.99,
       img: 'assets/imgs/osiris-rotulo.avif',
       units: 16,
-      amount: '1 Litro'
+      amount: '1 Litro',
+      abvIbu: 'ABV 5,2% | IBU 36'
     },
     {
       id: 3,
@@ -40,7 +42,8 @@ export class ProductsComponent implements OnInit {
       price: 46.99,
       img: 'assets/imgs/kemet-rotulo.avif',
       units: 20,
-      amount: '1 Litro'
+      amount: '1 Litro',
+      abvIbu: 'ABV 7,2% | IBU 65'
     }
   ];
 

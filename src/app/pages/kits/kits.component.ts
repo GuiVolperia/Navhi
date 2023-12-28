@@ -20,6 +20,7 @@ export class KitsComponent implements OnInit {
       img: 'assets/imgs/kit-1.avif',
       units: 20,
       amount: '3 Litros'
+      
     }
   ];
 
