@@ -1,36 +1,36 @@
-h5{
+h5 {
   font-size: 14px;
 }
 
 .products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .beer-card {
-    width: calc(33.333% - 10px);
-    border: 1px solid #e0e0e0;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: rgb(186, 180, 180);
+  width: calc(33.333% - 10px);
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(186, 180, 180);
+  border-radius: 8px; // Bordas arredondadas para estética
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra sutil para levantar um pouco o card
+
+  &.selected {
+    background-color: rgb(33, 0, 45);
+    color: white;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; // Limita a altura para evitar imagens muito altas
+    object-fit: cover; // Garante que a imagem cubra o espaço sem distorção
     border-radius: 8px; // Bordas arredondadas para estética
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra sutil para levantar um pouco o card
+  }
 
-    &.selected {
-        background-color: rgb(33, 0, 45);
-        color: white;
-    }
 
-    img {
-        width: 100%;
-        height: auto;
-        max-height: 200px; // Limita a altura para evitar imagens muito altas
-        object-fit: cover; // Garante que a imagem cubra o espaço sem distorção
-        border-radius: 8px; // Bordas arredondadas para estética
-    }
-
-  
 }
 
 .image-container {
@@ -70,81 +70,81 @@ h5{
 
 @media (max-width: 1024px) {
   .swal2-image-custom {
-      max-height: 90vh; // Ou até mesmo 70vh se você quiser que seja um pouco maior
-      /* Outros ajustes que você desejar para dispositivos móveis */
+    max-height: 90vh; // Ou até mesmo 70vh se você quiser que seja um pouco maior
+    /* Outros ajustes que você desejar para dispositivos móveis */
   }
-  
+
   /* Ajustando o tamanho geral do popup em dispositivos móveis */
   .swal2-popup {
-      width: 90% !important; // Ocupa a maior parte da largura da tela
-      padding: 1.25em !important;
+    width: 90% !important; // Ocupa a maior parte da largura da tela
+    padding: 1.25em !important;
   }
 }
 
 
 /* Estilização do Switch */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px; // largura do switch
-    height: 34px; // altura do switch
-  
-    input { 
-      opacity: 0; // o input está oculto, mas funcional
-      width: 0;
-      height: 0;
-    }
-  
-    .slider {
+  position: relative;
+  display: inline-block;
+  width: 60px; // largura do switch
+  height: 34px; // altura do switch
+
+  input {
+    opacity: 0; // o input está oculto, mas funcional
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; // cor do fundo do switch
+    transition: .4s; // animação suave
+    border-radius: 34px; // borda arredondada
+
+    &:before {
       position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc; // cor do fundo do switch
+      content: "";
+      height: 26px; // altura do círculo interno
+      width: 26px; // largura do círculo interno
+      left: 4px;
+      bottom: 4px;
+      background-color: white; // cor do círculo interno
       transition: .4s; // animação suave
-      border-radius: 34px; // borda arredondada
-  
-      &:before {
-        position: absolute;
-        content: "";
-        height: 26px; // altura do círculo interno
-        width: 26px; // largura do círculo interno
-        left: 4px;
-        bottom: 4px;
-        background-color: white; // cor do círculo interno
-        transition: .4s; // animação suave
-        border-radius: 50%; // torna o círculo perfeitamente arredondado
-      }
-    }
-  
-    input:checked + .slider {
-      background-color: #2196F3; // cor de fundo quando ativado
-    }
-  
-    input:focus + .slider {
-      box-shadow: 0 0 1px #2196F3; // sombra do foco
-    }
-  
-    input:checked + .slider:before {
-      transform: translateX(26px); // move o círculo interno para a direita quando ativado
+      border-radius: 50%; // torna o círculo perfeitamente arredondado
     }
   }
-  
-  // Estilos adicionais para o switch se necessário...
-  
-  .budget-card {
-    width: 60%; // ajuste a largura conforme necessário
-    margin: 10px auto; // centraliza o card
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: white; // fundo branco
-    display: flex;
-    justify-content: space-between; // espaça os elementos igualmente
-    align-items: center; // centraliza os elementos verticalmente
+
+  input:checked+.slider {
+    background-color: #2196F3; // cor de fundo quando ativado
+  }
+
+  input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3; // sombra do foco
+  }
+
+  input:checked+.slider:before {
+    transform: translateX(26px); // move o círculo interno para a direita quando ativado
+  }
+}
+
+// Estilos adicionais para o switch se necessário...
+
+.budget-card {
+  width: 60%; // ajuste a largura conforme necessário
+  margin: 10px auto; // centraliza o card
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white; // fundo branco
+  display: flex;
+  justify-content: space-between; // espaça os elementos igualmente
+  align-items: center; // centraliza os elementos verticalmente
 }
 
 @media (max-width: 768px) {
@@ -153,31 +153,58 @@ h5{
   }
 }
 
+/* Estilo para dispositivos maiores */
 .info-cards {
   display: flex;
-  justify-content: space-between; // espaça os cards igualmente
-  margin-bottom: 20px; // espaço antes dos cards de cerveja
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* permite que os cards se ajustem conforme a largura */
+  margin-bottom: 20px;
 }
 
+/* Estilo dos cards individuais */
+.budget-card,
 .shipping-card {
-  width: 40%;
-  margin: 10px; // espaço entre os cards
+  flex: 1 1 calc(50% - 20px);
+  /* ajusta para que cada um tome quase metade da largura */
+  margin: 10px;
   padding: 20px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: white;
-  // Pode adicionar mais estilo conforme necessário
 }
 
-@media (max-width: 768px) {
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
   .info-cards {
-    flex-direction: column; // empilha os cards verticalmente em telas pequenas
+    flex-direction: column;
+    /* empilha os cards verticalmente */
   }
 
   .budget-card,
   .shipping-card {
-    width: 90%; // maior largura em dispositivos menores
-    margin: 10px auto; // centraliza os cards
+    flex-basis: 100%;
+    /* faz com que cada card ocupe a largura total */
+    margin: 10px 0;
+    /* ajusta a margem para dispositivos móveis */
+  }
+
+  .beer-card {
+    width: 100%;
+    /* faz com que cada card de cerveja ocupe a largura total */
+    margin-bottom: 15px;
   }
 }
+
+/* Ajustando tamanhos de fonte para dispositivos menores */
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5 {
+    font-size: calc(1em + 1vw); /* ajusta o tamanho da fonte com base na largura da tela */
+  }
+
+  .botaoNavhi, .botaoNavhiVerde {
+    padding: 8px 16px; /* reduz o padding para botões em telas menores */
+  }
+}
+
