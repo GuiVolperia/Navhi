@@ -2,6 +2,10 @@ h5 {
   font-size: 14px;
 }
 
+.liters{
+  padding-top: 0;
+}
+
 .products-container {
   display: flex;
   flex-wrap: wrap;
@@ -147,10 +151,9 @@ h5 {
   align-items: center; // centraliza os elementos verticalmente
 }
 
-@media (max-width: 768px) {
-  .budget-card {
-    width: 90%; // maior largura em dispositivos menores
-  }
+.budget-value {
+  padding-right: 50px;
+  font-size: 1.5rem;
 }
 
 /* Estilo para dispositivos maiores */
@@ -163,7 +166,7 @@ h5 {
 }
 
 /* Estilo dos cards individuais */
-.budget-card,
+
 .shipping-card {
   flex: 1 1 calc(50% - 20px);
   /* ajusta para que cada um tome quase metade da largura */
@@ -195,6 +198,9 @@ h5 {
     /* faz com que cada card de cerveja ocupe a largura total */
     margin-bottom: 15px;
   }
+  .botaoNavhi, .botaoNavhiVerde {
+    padding: 4px 8px; /* reduz o padding para botões em telas menores */
+  }
 }
 
 /* Ajustando tamanhos de fonte para dispositivos menores */
@@ -204,7 +210,11 @@ h5 {
   }
 
   .botaoNavhi, .botaoNavhiVerde {
-    padding: 8px 16px; /* reduz o padding para botões em telas menores */
+    padding: 4px 8px; /* reduz o padding para botões em telas menores */
+  }
+
+  .budget-card {
+    width: 100%; // maior largura em dispositivos menores
   }
 }
 

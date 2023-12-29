@@ -3,7 +3,7 @@
 <div class="info-cards mt-5">
     <div class="budget-card">
         <label>Valor Cotação: </label>
-        <span class="fs-rem-15">R${{ getBudgetValue() }}</span>
+        <span class="budget-value">R${{ getBudgetValue() }}</span>
         <button class="botaoNavhiVerde" (click)="sendQuotation()" [disabled]="this.budgetValue === 0">Fazer Pedido</button>
     </div>
     <div class="shipping-card">
@@ -22,14 +22,14 @@
         <h4 class="mt-2">ABV: {{ beer.abv }}% | IBU: {{ beer.ibu }}</h4>
         <h5>Selecionar</h5>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 mbt-1">
                 <label class="switch">
                     <input type="checkbox" (change)="toggleBeerSelection(beer)">
                     <span class="slider round"></span>
                 </label>
             </div>
-            <div class="col-md-4" *ngIf="beer.selected">
-                <select (change)="updateBudgetValue(beer, $event)" class="form-select">
+            <div class="col-md-4 mbt-1" *ngIf="beer.selected">
+                <select (change)="updateBudgetValue(beer, $event)" class="form-select liters">
                     <option *ngFor="let value of prices[beer.id-1].valuesLiters" [value]="value.liters">{{value.liters}}</option>
                 </select>
             </div>
