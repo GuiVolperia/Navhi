@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProhibitedContentComponent } from './pages/prohibited-content/prohibited-content.component';
 import { AgeVerificationComponent } from './pages/age-verification/age-verification.component';
 import { KitsComponent } from './pages/kits/kits.component';
+import { BudgetsComponent } from './pages/budgets/budgets.component';
 
 
 
@@ -29,7 +30,8 @@ import { KitsComponent } from './pages/kits/kits.component';
      EventsComponent,
      AgeVerificationComponent,
      ProhibitedContentComponent,
-     KitsComponent,     
+     KitsComponent,
+     BudgetsComponent,     
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,41 @@
+<h1 class="mt-3 text-center">A Navhi vai produzir receitas especialmente para você!</h1>
+
+<div class="info-cards mt-5">
+    <div class="budget-card">
+        <label>Valor Cotação: </label>
+        <span class="fs-rem-15">R${{ getBudgetValue() }}</span>
+        <button class="botaoNavhiVerde" (click)="sendQuotation()" [disabled]="this.budgetValue === 0">Fazer Pedido</button>
+    </div>
+    <div class="shipping-card">
+        <h4 class="fs-16">*Frete Não Incluso</h4>
+        <h4 class="fs-16">*O Prazo da produção até a entrega é de 50 dias</h4>
+    </div>
+</div>
+
+<div class="products-container mt-3">
+    <div *ngFor="let beer of beers" [ngClass]="{'selected': beer.selected}" class="beer-card">
+        <h3>{{ beer.name }}</h3>
+        <div class="image-container">
+            <img [src]="beer.label" alt="Rótulo da {{ beer.name }}" class="imagem1">
+            <i class="fa fa-search-plus loupe-icon" *ngIf="isDesktop" (click)="showImageInPopup(beer.label)"></i>
+        </div>
+        <h4 class="mt-2">ABV: {{ beer.abv }}% | IBU: {{ beer.ibu }}</h4>
+        <h5>Selecionar</h5>
+        <div class="row">
+            <div class="col-md-3">
+                <label class="switch">
+                    <input type="checkbox" (change)="toggleBeerSelection(beer)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="col-md-4" *ngIf="beer.selected">
+                <select (change)="updateBudgetValue(beer, $event)" class="form-select">
+                    <option *ngFor="let value of prices[beer.id-1].valuesLiters" [value]="value.liters">{{value.liters}}</option>
+                </select>
+            </div>
+            <div class="col-md-5" *ngIf="beer.selected">
+                <h4>Litros</h4>
+            </div>
+        </div>
+    </div>
+</div>

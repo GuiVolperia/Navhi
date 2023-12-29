@@ -128,6 +128,54 @@ img {
     text-decoration: none;
 }
 
+.botaoNavhiVerde {
+    background-color: rgb(21, 96, 31);
+    color: white !important;
+    /* Defini a cor do texto para branco para contraste. Ajuste conforme necessário. */
+    border: solid 2px rgb(33, 0, 45);
+    border-radius: 5px;
+    /* Borda arredondada. Ajuste conforme necessário. */
+    padding: 10px 20px;
+    /* Espaçamento interno para o botão. Ajuste conforme necessário. */
+    cursor: pointer;
+    transition: all 0.3s;
+    /* Transição suave para hover e active */
+    text-decoration: none;
+    /* Se for um link estilizado como botão */
+    font-family: 'NavhiFont';
+    /* Herda a fonte do elemento pai. Ajuste conforme necessário. */
+}
+
+.botaoNavhiVerde:hover {
+    background-color: white !important;
+    /* Um pouco mais claro no hover */
+    border: solid 2px rgb(33, 0, 45);
+    color: rgb(33, 0, 45) !important;
+}
+
+.botaoNavhiVerde:active {
+    background-color: rgba(33, 0, 45, 0.8);
+    /* Ainda mais claro no estado ativo */
+    transform: scale(0.95);
+    /* Faz o botão parecer um pouco pressionado quando ativo */
+}
+
+/* Se o botão for um link, remova o sublinhado */
+.botaoNavhiVerde:link,
+.botaoNavhiVerde:visited {
+    text-decoration: none;
+}
+
+.botaoNavhiVerde:disabled{
+    background-color: #f1f1f1;
+    /* Cinza claro para indicar que está desabilitado */
+    color: rgb(180, 180, 180) !important;
+    /* Um tom de cinza para o texto */
+    border: 2px solid rgb(180, 180, 180);
+    /* Bordas em cinza */
+    cursor: not-allowed;
+    /* Cursor que indica que o botão está desabilitado */
+}
 
 .botaoNavhiBranco {
     background-color: white;
@@ -223,6 +271,11 @@ img {
 .fs-24 {
     font-size: 24px !important;
 }
+
+.fs-rem-10 {
+    font-size: 1rem;
+}
+
 
 .fs-rem-15 {
     font-size: 1.5rem;

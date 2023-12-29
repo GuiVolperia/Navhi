@@ -9,6 +9,7 @@ import { ProhibitedContentComponent } from './pages/prohibited-content/prohibite
 import { KitsComponent } from './pages/kits/kits.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AdminModule } from './admin/admin.module';
+import { BudgetsComponent } from './pages/budgets/budgets.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'cervejas', component: ProductsComponent },
   { path: 'kits', component: KitsComponent },
   { path: 'eventos', component: EventsComponent },
+  { path: 'orcamentos', component: BudgetsComponent },
   { path: 'menor-idade', component: ProhibitedContentComponent },
 
 
