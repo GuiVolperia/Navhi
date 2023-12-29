@@ -1,4 +1,4 @@
-<app-age-verification *ngIf="isAgeVerified == null && !isAdmin" (ageVerified)="onAgeVerified($event)"></app-age-verification>
+<app-age-verification *ngIf="isAgeVerified == null && !isAdmin && showUnderage" (ageVerified)="onAgeVerified($event)"></app-age-verification>
 <app-prohibited-content *ngIf="!isAgeVerified && showUnderage && !isAdmin"></app-prohibited-content>
 
 
