@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   isAgeVerified: boolean | null = null;
   showUnderage: boolean = false;
   isAdmin: boolean = true;
+  isGoogleBot: boolean  = /Googlebot/.test(navigator.userAgent);
 
   constructor(public router: Router, private titleService: Title, private metaService: Meta) { 
 
@@ -34,9 +35,9 @@ export class AppComponent implements OnInit {
   onAgeVerified(isVerified: boolean): void {
     this.isAgeVerified = isVerified;
 
-    const isGooglebot = /Googlebot/.test(navigator.userAgent);
+    
 
-    if (!isVerified && !isGooglebot) {
+    if (!isVerified && !this.isGoogleBot) {
       this.showUnderage = true;
     }
   }
